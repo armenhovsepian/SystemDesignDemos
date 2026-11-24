@@ -1,0 +1,11 @@
+@UrlShortenerDemo_HostAddress = http://localhost:5205
+
+GET {{UrlShortenerDemo_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{UrlShortenerDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
