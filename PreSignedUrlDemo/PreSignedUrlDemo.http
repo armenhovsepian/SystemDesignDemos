@@ -1,0 +1,11 @@
+@PreSignedUrlDemo_HostAddress = http://localhost:5255
+
+GET {{PreSignedUrlDemo_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{PreSignedUrlDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

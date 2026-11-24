@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="PreSignedUrlDemo/PreSignedUrlDemo.csproj" Id="be1773c3-2335-4135-bcae-94aaeab4d0bc" />
   <Project Path="UrlShortenerDemo/UrlShortenerDemo.csproj" Id="39ed5afd-8dd1-469d-99f5-ebed66fb23b8" />
 </Solution>
