@@ -72,5 +72,19 @@ namespace UrlShortenerDemo.Services
 
             return entry;
         }
+
+        public async Task TrackClickAsync(long urlId)
+        {
+            // Atomic SQL UPDATE: Skip read-modify-write entirely. Let the database do the increment atomically.
+
+            // option 1
+            //await _db.Database.ExecuteSqlRawAsync("UPDATE ShortenedUrls SET Clicks = Clicks + 1 WHERE Id = {0}", urlId);
+
+            // option 2 (EF Core 7+)
+            await _db.ShortenedUrls
+                     .Where(c => c.Id == urlId)
+                     .ExecuteUpdateAsync(s => s.SetProperty(c => c.ClickCount, c => c.ClickCount + 1));
+        }
+
     }
 }

@@ -36,7 +36,7 @@ namespace UrlShortenerDemo.Controllers
                 return Gone(); // 410
 
             // Fire-and-forget click tracking
-            //_ = Task.Run(() => TrackClickAsync(entry.Id));
+            _ = Task.Run(() => _service.TrackClickAsync(entry.Id));
 
             return entry.IsPermanent
                 ? RedirectPermanent(entry.OriginalUrl)
